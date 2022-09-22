@@ -1,0 +1,15 @@
+name: 'Comment Action'
+description: 'Comment on issues with x label after they are closed'
+author: 'Abdalla Ali'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github token'
+    required: true
+  TENOR_TOKEN:
+    description: 'Tenor API token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
