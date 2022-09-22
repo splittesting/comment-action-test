@@ -9675,8 +9675,9 @@ async function run() {
     const { context = {} } = github;
     const { issue } = context.payload;
 
-    await octokit.issues.createComment({
+    await octokit.rest.issues.createComment({
         ...context.repo,
+        issue_number: payload.number, 
         body: 'Issue closed. Please leave feedback'
     });
 }
