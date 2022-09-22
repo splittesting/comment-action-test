@@ -9677,7 +9677,7 @@ async function run() {
 
     await octokit.rest.issues.createComment({
         ...context.repo,
-        issue_number: payload.number, 
+        issue_number: issue.number, 
         body: 'Issue closed. Please leave feedback'
     });
 }
